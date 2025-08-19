@@ -1,0 +1,294 @@
+  /* Basic Setup & Variables */
+  :root {
+      --primary-color: #007BFF;
+      --secondary-color: #f4f4f4;
+      --dark-color: #2c3e50;
+      --light-color: #ecf0f1;
+      scroll-padding-top: 80px;
+  }
+
+  /* Global Styles */
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif; /* Changed font for English */
+      margin: 0;
+      line-height: 1.6;
+      background: var(--light-color);
+      color: #333;
+      
+  }
+
+  .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+      overflow: hidden;
+  }
+
+  h1, h2 {
+      font-weight: 600;
+  }
+
+  /* Header & Navigation */
+  header {
+      background: #fff;
+      color: var(--dark-color);
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  header .logo {
+      color: var(--primary-color);
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+  }
+
+  header ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+  }
+
+  header ul li a {
+      color: var(--dark-color);
+      text-decoration: none;
+      padding: 0 15px;
+      transition: color 0.3s;
+      font-weight: 600;
+  }
+
+  header ul li a:hover {
+      color: var(--primary-color);
+  }
+
+  main {
+      padding-top: 80px; /* Space for the fixed header */
+  }
+
+  section {
+      padding: 60px 0;
+      text-align: center;
+      scroll-margin-top: 80px;
+  }
+
+  section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: var(--dark-color);
+  }
+
+  /* Hero Section */
+  .hero {
+      background: var(--dark-color);
+      color: var(--light-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+  }
+
+  .hero .slogan {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin-bottom: 30px;
+  }
+
+  /* General Button Style */
+  .btn {
+      display: inline-block;
+      background: var(--primary-color);
+      color: #fff !important; /* Use !important to override other link styles if needed */
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s;
+      margin: 5px;
+      border: none;
+  }
+
+  .btn:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+  }
+
+  .social-links .btn {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+  }
+
+  .social-links .btn:hover {
+      background: var(--primary-color);
+      color: #fff !important;
+  }
+
+
+  /* About Section */
+  #about {
+      background: #fff;
+  }
+  #about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      text-align: center;
+  }
+
+  /* ** UPDATED Projects Section **
+  Here are the changes you requested for larger project containers.
+  */
+  .project-grid {
+      display: grid;
+      /* Increased the minimum width to make cards larger and have 2 columns on most screens */
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 25px;
+  }
+
+  .project-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left; /* Aligned to the left for English content */
+      transition: transform 0.3s, box-shadow 0.3s;
+      /* Added min-height and flexbox for better content alignment */
+      min-height: 200px; 
+      display: flex;
+      flex-direction: column;
+  }
+
+  .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  }
+
+  .project-card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+  }
+
+  .project-card p {
+      flex-grow: 1; /* This makes the paragraph fill available space, pushing the link to the bottom */
+      margin-bottom: 20px;
+  }
+
+  .project-card a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      align-self: flex-start; /* Aligns the button to the start of the card */
+  }
+
+  /* Certificates Grid */
+  .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+  }
+
+  .certificate-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  }
+
+  .certificate-card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+  }
+
+  /* Contact Section */
+  #contact {
+      background: var(--dark-color);
+      color: var(--light-color);
+  }
+  #contact h2, #contact p{
+      color: var(--light-color);
+  }
+  #contact .btn {
+      background: var(--light-color);
+      color: var(--dark-color) !important;
+  }
+  #contact .btn:hover {
+      background: var(--primary-color);
+      color: #fff !important;
+  }
+
+  /* Footer */
+  footer {
+      background: #222;
+      color: var(--light-color);
+      text-align: center;
+      padding: 20px 0;
+  }
+
+  /* Responsive Styles */
+  @media(max-width: 768px) {
+      header nav {
+          flex-direction: column;
+      }
+
+      header ul {
+          padding-top: 15px;
+      }
+
+      .hero h1 {
+          font-size: 2.5rem;
+      }
+      
+      .hero .slogan {
+          font-size: 1.1rem;
+      }
+      
+      /* Make project cards take full width on smaller screens */
+      .project-grid {
+          grid-template-columns: 1fr;
+      }
+  }
+  #home {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+#about {
+  background: #f9f9f9;
+  color: #333;
+}
+#projects {
+  background: #fae8cd;
+  color: #333;
+}
+#contact {
+  background: #1a1a1a;
+  color: #fff;
+}
