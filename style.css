@@ -34,7 +34,7 @@
 
   /* Header & Navigation */
   header {
-      background: #fff;
+      background: #000000;
       color: var(--dark-color);
       padding: 1rem 0;
       position: fixed;
@@ -306,3 +306,4 @@ background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
 }
+
