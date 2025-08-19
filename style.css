@@ -153,6 +153,9 @@
       font-size: 1.1rem;
       text-align: center;
   }
+  #about h2{
+      color: white;
+  }
 
   /* ** UPDATED Projects Section **
   Here are the changes you requested for larger project containers.
@@ -190,6 +193,7 @@
   .project-card p {
       flex-grow: 1; /* This makes the paragraph fill available space, pushing the link to the bottom */
       margin-bottom: 20px;
+      color: black
   }
 
   .project-card a {
@@ -197,6 +201,9 @@
       text-decoration: none;
       font-weight: bold;
       align-self: flex-start; /* Aligns the button to the start of the card */
+  }
+    #projects h2{
+      color: white;
   }
 
   /* Certificates Grid */
@@ -226,6 +233,9 @@
   .certificate-card h3 {
       color: var(--primary-color);
       margin-top: 0;
+  }
+    #certificates h2{
+      color: white;
   }
 
   /* Contact Section */
@@ -281,14 +291,18 @@
   color: white;
 }
 #about {
-  background: #f9f9f9;
-  color: #333;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 #projects {
-  background: #fae8cd;
-  color: #333;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 #contact {
-  background: #1a1a1a;
-  color: #fff;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+#certificates{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
 }
